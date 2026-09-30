@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLAIR | Football Performance Identity</title>
+    <meta
+      name="description"
+      content="FLAIR brings premium football performance gear, elite training essentials, and identity-driven style for players who move with purpose."
+    />
+    <style>
+      :root {
+        --bg: #09090b;
+        --bg-2: #101114;
+        --panel: #15171b;
+        --panel-2: #1a1d22;
+        --panel-3: #111317;
+        --text: #f5f7fa;
+        --muted: #a3acb8;
+        --line: rgba(255, 255, 255, 0.08);
+        --accent: #00d2ff;
+        --accent-2: #0072ff;
+        --accent-soft: rgba(0, 210, 255, 0.12);
+        --light: #ffffff;
+        --success: #24c274;
+        --warning: #ffcf5c;
+        --shadow: rgba(0, 0, 0, 0.35);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top, rgba(0, 210, 255, 0.08), transparent 18%),
+          linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+
+      .container {
+        width: min(1200px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 96px 0;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 16px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+
+      h1, h2, h3, h4, p { margin: 0; }
+
+      .brand-header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(14px);
+        background: rgba(9, 9, 11, 0.72);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .nav-mark {
+        position: relative;
+        width: 14px;
+        height: 32px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        transform: skewX(-25deg);
+        box-shadow: 0 0 18px rgba(0, 210, 255, 0.55);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        color: var(--muted);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .nav-links a:hover { color: var(--accent); }
+
+      .nav-cta {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #030406;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        padding: 88px 0 48px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 52px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(3.2rem, 6vw, 6.5rem);
+        line-height: 0.96;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 28px;
+      }
+
+      .hero-copy h1 .outline {
+        display: inline-block;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.9);
+      }
+
+      .hero-copy p {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        margin-bottom: 28px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .primary-btn, .secondary-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 16px 26px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .primary-btn {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #06080d;
+        box-shadow: 0 18px 28px rgba(0, 210, 255, 0.18);
+      }
+
+      .secondary-btn {
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+      }
+
+      .primary-btn:hover, .secondary-btn:hover, .nav-cta:hover, .buy-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+      }
+
+      .stat {
+        min-width: 140px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.9rem;
+        font-weight: 900;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .visual-card {
+        position: relative;
+        background: linear-gradient(180deg, rgba(19,22,27,0.93), rgba(15,16,19,0.96));
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: 0 22px 60px rgba(0,0,0,0.45);
+      }
+
+      .visual-panel {
+        background: linear-gradient(160deg, rgba(0,210,255,0.12), rgba(0,114,255,0.08));
+        border: 1px solid rgba(0,210,255,0.2);
+        border-radius: 24px;
+        padding: 24px;
+        min-height: 480px;
+        display: flex;
+        align-items: end;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .visual-panel::before {
+        content: "";
+        position: absolute;
+        inset: 14% 15% auto auto;
+        width: 150px;
+        height: 150px;
+        background: rgba(0,210,255,0.14);
+        filter: blur(18px);
+        border-radius: 50%;
+      }
+
+      .product-showcase {
+        position: relative;
+        width: 100%;
+        min-height: 420px;
+      }
+
+      .showcase-box {
+        position: absolute;
+        bottom: 0;
+        right: 18%;
+        width: 60%;
+        height: 220px;
+        background: linear-gradient(135deg, #10151c, #242c34);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 26px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+        transform: rotate(-10deg);
+      }
+
+      .showcase-box:nth-child(2) {
+        right: 4%;
+        bottom: 42px;
+        width: 48%;
+        height: 220px;
+        background: linear-gradient(135deg, #171d26, #0b0d12);
+        transform: rotate(12deg);
+      }
+
+      .showcase-box:nth-child(3) {
+        left: 8%;
+        bottom: 8px;
+        width: 34%;
+        height: 180px;
+        background: linear-gradient(135deg, #11151a, #1b2730);
+        transform: rotate(-5deg);
+      }
+
+      .showcase-tag {
+        position: absolute;
+        left: 24px;
+        top: 18px;
+        background: rgba(0,0,0,0.28);
+        border: 1px solid rgba(255,255,255,0.08);
+        color: var(--light);
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .feature-strip {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 35px;
+      }
+
+      .mini-feature {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 18px 16px;
+      }
+
+      .mini-feature strong {
+        display: block;
+        color: var(--light);
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .mini-feature span {
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .trust-bar {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        background: rgba(255,255,255,0.015);
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        padding: 32px 0;
+      }
+
+      .trust-item {
+        text-align: center;
+      }
+
+      .trust-item strong {
+        display: block;
+        font-size: clamp(1.5rem, 2vw, 2.2rem);
+        margin-bottom: 8px;
+      }
+
+      .trust-item span {
+        color: var(--muted);
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .section-header {
+        margin-bottom: 36px;
+      }
+
+      .section-header h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+
+      .section-header p {
+        max-width: 700px;
+        color: var(--muted);
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 20px 18px;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 210, 255, 0.7);
+        box-shadow: 0 12px 28px rgba(0, 210, 255, 0.08);
+      }
+
+      .product-card .badge {
+        display: inline-flex;
+        align-self: flex-start;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #030407;
+        font-weight: 800;
+        font-size: 0.66rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 8px 12px;
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+
+      .product-title {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .product-desc {
+        color: var(--muted);
+        min-height: 66px;
+        line-height: 1.65;
+        margin-bottom: 18px;
+      }
+
+      .product-price {
+        font-size: 1.7rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+
+      .buy-btn {
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 12px;
+        background: var(--light);
+        color: #07090f;
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .buy-btn:hover {
+        background: var(--accent);
+      }
+
+      .benefits {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .benefits-panel {
+        background: linear-gradient(180deg, rgba(16,19,24,0.96), rgba(11,12,16,0.96));
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px;
+      }
+
+      .feature-list {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .feature-item {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255,255,255,0.02);
+      }
+
+      .check {
+        flex: 0 0 28px;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #02050b;
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        margin-top: 2px;
+      }
+
+      .feature-item strong {
+        display: block;
+        margin-bottom: 5px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .feature-item p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .process-step {
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 18px;
+      }
+
+      .step-number {
+        display: inline-flex;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #05070b;
+        margin-bottom: 16px;
+      }
+
+      .process-step h3 {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .process-step p {
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .testimonial {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 20px 18px;
+      }
+
+      .stars {
+        color: var(--warning);
+        letter-spacing: 0.12em;
+        margin-bottom: 14px;
+      }
+
+      .testimonial p {
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+
+      .person {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #02060b;
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+      }
+
+      .person strong {
+        display: block;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .person span {
+        color: var(--muted);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .faq-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+
+      .faq-item {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px 20px 18px;
+      }
+
+      .faq-item h3 {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .faq-item p {
+        color: var(--muted);
+      }
+
+      .cta {
+        text-align: center;
+        background: linear-gradient(145deg, rgba(0,210,255,0.08), rgba(0,114,255,0.08));
+        border: 1px solid rgba(0,210,255,0.18);
+        border-radius: 28px;
+        padding: 42px 28px;
+      }
+
+      .cta h2 {
+        font-size: clamp(2.1rem, 4vw, 3.2rem);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .cta p {
+        max-width: 700px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 48px;
+        color: var(--muted);
+      }
+
+      .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .footer-links a:hover { color: var(--accent); }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .benefits,
+        .faq-wrap,
+        .testimonial-grid,
+        .process-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .section { padding: 72px 0; }
+        .feature-strip,
+        .trust-grid,
+        .benefits,
+        .faq-wrap,
+        .testimonial-grid,
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy h1 {
+          letter-spacing: 0.04em;
+        }
+
+        .nav {
+          justify-content: center;
+        }
+
+        .nav-cta {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="brand-header">
+      <div class="container">
+        <nav class="nav" aria-label="Main navigation">
+          <div class="nav-brand" aria-label="FLAIR home">
+            <span class="nav-mark" aria-hidden="true"></span>
+            <span>FLAIR</span>
+          </div>
+
+          <div class="nav-links">
+            <a href="#shop">Shop</a>
+            <a href="#benefits">Performance</a>
+            <a href="#process">How It Works</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">FAQ</a>
+          </div>
+
+          <a class="nav-cta" href="#shop">Shop Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Built for the game</span>
+            <h1>
+              Football<br />
+              <span class="outline">Performance</span><br />
+              Identity
+            </h1>
+            <p>
+              FLAIR helps players move sharper, feel lighter, and train with purpose.
+              From match-day protection to everyday performance essentials, every product is
+              engineered for better motion, greater comfort, and confident expression on the pitch.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#shop" class="primary-btn">Shop Collection</a>
+              <a href="#benefits" class="secondary-btn">Why FLAIR</a>
+            </div>
+
+            <div class="hero-stats" aria-label="Store statistics">
+              <div class="stat">
+                <strong>12k+</strong>
+                <span>Players equipped</span>
+              </div>
+              <div class="stat">
+                <strong>4.9/5</strong>
+                <span>Average rating</span>
+              </div>
+              <div class="stat">
+                <strong>48h</strong>
+                <span>Fast dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="FLAIR product showcase">
+            <div class="visual-card">
+              <div class="visual-panel">
+                <div class="product-showcase">
+                  <div class="showcase-tag">Elite essentials</div>
+                  <div class="showcase-box"></div>
+                  <div class="showcase-box"></div>
+                  <div class="showcase-box"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="feature-strip">
+              <div class="mini-feature">
+                <strong>Grip</strong>
+                <span>Boot stability and traction</span>
+              </div>
+              <div class="mini-feature">
+                <strong>Protection</strong>
+                <span>Lightweight support</span>
+              </div>
+              <div class="mini-feature">
+                <strong>Flow</strong>
+                <span>Breathable performance fit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="trust-bar">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <strong>99%</strong>
+            <span>Comfort fit</span>
+          </div>
+          <div class="trust-item">
+            <strong>3x</strong>
+            <span>Speed boost</span>
+          </div>
+          <div class="trust-item">
+            <strong>24/7</strong>
+            <span>Player support</span>
+          </div>
+          <div class="trust-item">
+            <strong>AUD</strong>
+            <span>Australian made</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="shop" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Shop the collection</span>
+            <h2>Performance essentials</h2>
+            <p>
+              Built for players who want gear that feels as aggressive, clean, and fast as their game.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div>
+                <div class="badge">Bestseller</div>
+                <h3 class="product-title">Built-In Shin Pads</h3>
+                <p class="product-desc">
+                  Elastic sleeves with ultra-light protection built straight into the fabric for match-day support.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$45.00 AUD</div>
+                <button class="buy-btn" data-product="shinpads">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <div class="badge">Performance</div>
+                <h3 class="product-title">Pro Grip Socks</h3>
+                <p class="product-desc">
+                  Non-slip traction pads stop your foot from sliding inside your boots and keep you locked in.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$25.00 AUD</div>
+                <button class="buy-btn" data-product="socks">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <div class="badge">New Release</div>
+                <h3 class="product-title">Flow State Strips</h3>
+                <p class="product-desc">
+                  Performance nasal strips designed to boost oxygen intake, calm breathing, and sustain stamina.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$18.00 AUD</div>
+                <button class="buy-btn" data-product="strips">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <div class="badge">Training</div>
+                <h3 class="product-title">Core Recovery Wrap</h3>
+                <p class="product-desc">
+                  Compression support for post-match recovery, muscle comfort, and easier movement after hard sessions.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$32.00 AUD</div>
+                <button class="buy-btn" data-product="recovery">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <div class="badge">Elite Fit</div>
+                <h3 class="product-title">Motion Base Tee</h3>
+                <p class="product-desc">
+                  Lightweight training top with moisture control, shape retention, and unrestricted upper-body motion.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$39.00 AUD</div>
+                <button class="buy-btn" data-product="tee">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <div class="badge">Match Day</div>
+                <h3 class="product-title">Velocity Travel Kit</h3>
+                <p class="product-desc">
+                  A compact bundle for the essentials: socks, tape, wipes, and performance accessories in one kit.
+                </p>
+              </div>
+              <div>
+                <div class="product-price">$58.00 AUD</div>
+                <button class="buy-btn" data-product="kit">Add To Cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Why athletes choose us</span>
+            <h2>Built to sharpen every movement</h2>
+          </div>
+
+          <div class="benefits">
+            <div class="benefits-panel">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Premium protection</strong>
+                    <p>Engineered for confident tackles, quick direction changes, and resilient play under pressure.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Lightweight movement</strong>
+                    <p>Functional design that stays breathable, agile, and comfortable from kickoff to full-time.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Tour-grade performance</strong>
+                    <p>Made for everyday training, club sessions, and high-intensity match environments alike.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="benefits-panel">
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Better fit</strong>
+                    <p>Comfort-focused sizing and materials keep every session feeling more natural and controlled.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Elite style</strong>
+                    <p>Clean, modern energy with a bold identity designed to stand out without sacrificing function.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="check">✓</div>
+                  <div>
+                    <strong>Everyday value</strong>
+                    <p>High-quality essentials at accessible pricing so athletes can build a full setup without compromise.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">How it works</span>
+            <h2>Simple, fast, performance-first</h2>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3>Choose your gear</h3>
+              <p>Select the essentials that match your training, style, and playing needs.</p>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3>Build your setup</h3>
+              <p>Combine protection, grip, and recovery pieces into a system that feels complete.</p>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3>Order in seconds</h3>
+              <p>Fast, easy checkout with no friction so you can get back to what matters most.</p>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h3>Play with confidence</h3>
+              <p>Train harder, move smarter, and show up looking and feeling the part.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Player feedback</span>
+            <h2>Trusted by athletes</h2>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The grip socks are unreal. They lock my foot in my boots and I feel more stable on every first touch.”
+              </p>
+              <div class="person">
+                <div class="avatar">A</div>
+                <div>
+                  <strong>Amir K.</strong>
+                  <span>Midfielder</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                “FLAIR gear looks premium and performs exactly how a serious player needs it. No wasted bulk, just comfort and motion.”
+              </p>
+              <div class="person">
+                <div class="avatar">T</div>
+                <div>
+                  <strong>Tariq L.</strong>
+                  <span>Fullback</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p>
+                “The Recovery Wrap and shin pads made a clear difference in my training load and confidence on the pitch.”
+              </p>
+              <div class="person">
+                <div class="avatar">R</div>
+                <div>
+                  <strong>Rafi M.</strong>
+                  <span>Striker</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">FAQ</span>
+            <h2>Everything you need to know</h2>
+          </div>
+
+          <div class="faq-wrap">
+            <div class="faq-item">
+              <h3>Do you ship across Australia?</h3>
+              <p>Yes. We ship nationwide and dispatch most orders within 48 hours.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Are the products performance-tested?</h3>
+              <p>Absolutely. Each item is designed around comfort, stability, and movement efficiency for real training use.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>What if I need a different size?</h3>
+              <p>We provide guidance on sizing and are happy to help with fit questions before checkout.</p>
+            </div>
+
+            <div class="faq-item">
+              <h3>Is this gear suitable for training and matches?</h3>
+              <p>Yes. Our collection is built for everyday sessions, match-day use, and recovery-focused training routines.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta">
+            <span class="eyebrow">Step into the flow</span>
+            <h2>Train harder. Move cleaner. Play brighter.</h2>
+            <p>
+              Upgrade your setup with FLAIR gear built for the speed, pressure, and style of modern football.
+            </p>
+            <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+              <a href="#shop" class="primary-btn">Get Your Gear</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-wrap">
+        <div class="nav-brand" aria-label="FLAIR brand footer">
+          <span class="nav-mark" aria-hidden="true"></span>
+          <span>FLAIR</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Shipping &amp; Returns</a>
+        </div>
+
+        <p>&copy; 2026 Kingibra FLAIR Fútbol. Support: ibrahimabdisalam961@gmail.com</p>
+      </div>
+    </footer>
+
+    <script>
+      const buttons = document.querySelectorAll('.buy-btn');
+
+      const productNames = {
+        shinpads: 'Built-In Shin Pads',
+        socks: 'Pro Grip Socks',
+        strips: 'Flow State Strips',
+        recovery: 'Core Recovery Wrap',
+        tee: 'Motion Base Tee',
+        kit: 'Velocity Travel Kit',
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const product = button.dataset.product;
+          const selected = productNames[product] || 'Selected item';
+          alert(`${selected} added to cart.`);
+        });
+      });
+    </script>
+  </body>
+</html>
