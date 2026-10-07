@@ -47,10 +47,7 @@
         margin: 0 auto;
       }
 
-      .section {
-        padding: 96px 0;
-      }
-
+      .section { padding: 96px 0; }
       .eyebrow {
         display: inline-block;
         margin-bottom: 16px;
@@ -123,9 +120,7 @@
         position: relative;
       }
 
-      .nav-cta:hover {
-        transform: translateY(-2px);
-      }
+      .nav-cta:hover { transform: translateY(-2px); }
 
       .cart-badge {
         position: absolute;
@@ -143,10 +138,7 @@
         font-size: 0.75rem;
       }
 
-      .hero {
-        padding: 88px 0 48px;
-      }
-
+      .hero { padding: 88px 0 48px; }
       .hero-grid {
         display: grid;
         grid-template-columns: 1.15fr 0.85fr;
@@ -218,16 +210,12 @@
         gap: 28px;
       }
 
-      .stat {
-        min-width: 140px;
-      }
-
+      .stat { min-width: 140px; }
       .stat strong {
         display: block;
         font-size: 1.9rem;
         font-weight: 900;
       }
-
       .stat span {
         color: var(--muted);
         font-size: 0.75rem;
@@ -235,10 +223,7 @@
         text-transform: uppercase;
       }
 
-      .hero-visual {
-        position: relative;
-      }
-
+      .hero-visual { position: relative; }
       .visual-card {
         position: relative;
         background: linear-gradient(180deg, rgba(19,22,27,0.93), rgba(15,16,19,0.96));
@@ -363,16 +348,12 @@
         padding: 32px 0;
       }
 
-      .trust-item {
-        text-align: center;
-      }
-
+      .trust-item { text-align: center; }
       .trust-item strong {
         display: block;
         font-size: clamp(1.5rem, 2vw, 2.2rem);
         margin-bottom: 8px;
       }
-
       .trust-item span {
         color: var(--muted);
         font-size: 0.75rem;
@@ -380,17 +361,13 @@
         text-transform: uppercase;
       }
 
-      .section-header {
-        margin-bottom: 36px;
-      }
-
+      .section-header { margin-bottom: 36px; }
       .section-header h2 {
         font-size: clamp(2rem, 4vw, 3.1rem);
         letter-spacing: 0.06em;
         text-transform: uppercase;
         margin-bottom: 14px;
       }
-
       .section-header p {
         max-width: 700px;
         color: var(--muted);
@@ -468,9 +445,7 @@
         transition: background 0.2s ease, transform 0.2s ease;
       }
 
-      .buy-btn:hover {
-        background: var(--accent);
-      }
+      .buy-btn:hover { background: var(--accent); }
 
       .benefits {
         display: grid;
@@ -640,9 +615,7 @@
         text-transform: uppercase;
       }
 
-      .faq-item p {
-        color: var(--muted);
-      }
+      .faq-item p { color: var(--muted); }
 
       .cta {
         text-align: center;
@@ -698,7 +671,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.8);
       }
 
       .modal.active {
@@ -712,7 +685,7 @@
         border: 1px solid var(--line);
         border-radius: 24px;
         padding: 40px;
-        max-width: 500px;
+        max-width: 620px;
         width: 90%;
         box-shadow: 0 30px 60px rgba(0,0,0,0.5);
       }
@@ -735,7 +708,7 @@
         border-radius: 16px;
         padding: 16px;
         margin: 20px 0;
-        max-height: 300px;
+        max-height: 260px;
         overflow-y: auto;
       }
 
@@ -748,13 +721,31 @@
         font-size: 0.9rem;
       }
 
-      .cart-item:last-child {
-        border-bottom: none;
+      .cart-item:last-child { border-bottom: none; }
+      .cart-item strong { color: var(--text); }
+
+      .cart-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px 0 8px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
-      .cart-item strong {
+      .checkout-field {
+        width: 100%;
+        margin-top: 12px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
         color: var(--text);
+        font: inherit;
       }
+
+      .checkout-field::placeholder { color: var(--muted); }
 
       .modal-actions {
         display: flex;
@@ -785,6 +776,17 @@
         color: var(--text);
       }
 
+      #paypal-button-container {
+        margin-top: 16px;
+        width: 100%;
+      }
+
+      .helper-text {
+        color: var(--muted);
+        font-size: 0.76rem;
+        margin-top: 8px;
+      }
+
       @media (max-width: 980px) {
         .hero-grid,
         .benefits,
@@ -794,13 +796,8 @@
           grid-template-columns: 1fr 1fr;
         }
 
-        .hero-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .nav-links {
-          display: none;
-        }
+        .hero-grid { grid-template-columns: 1fr; }
+        .nav-links { display: none; }
       }
 
       @media (max-width: 680px) {
@@ -814,25 +811,11 @@
           grid-template-columns: 1fr;
         }
 
-        .hero-copy h1 {
-          letter-spacing: 0.04em;
-        }
-
-        .nav {
-          justify-content: center;
-        }
-
-        .nav-cta {
-          display: none;
-        }
-
-        .modal-content {
-          padding: 24px;
-        }
-
-        .modal-content h2 {
-          font-size: 1.4rem;
-        }
+        .hero-copy h1 { letter-spacing: 0.04em; }
+        .nav { justify-content: center; }
+        .nav-cta { display: none; }
+        .modal-content { padding: 24px; }
+        .modal-content h2 { font-size: 1.4rem; }
       }
     </style>
   </head>
@@ -970,7 +953,7 @@
               </div>
               <div>
                 <div class="product-price">$45.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Built-In Shin Pads', '45.00')">Add To Cart</button>
+                <button class="buy-btn" onclick="addToCart('Built-In Shin Pads', 45.00)">Add To Cart</button>
               </div>
             </article>
 
@@ -984,7 +967,7 @@
               </div>
               <div>
                 <div class="product-price">$25.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Pro Grip Socks', '25.00')">Add To Cart</button>
+                <button class="buy-btn" onclick="addToCart('Pro Grip Socks', 25.00)">Add To Cart</button>
               </div>
             </article>
 
@@ -998,49 +981,21 @@
               </div>
               <div>
                 <div class="product-price">$18.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Flow State Strips', '18.00')">Add To Cart</button>
+                <button class="buy-btn" onclick="addToCart('Flow State Strips', 18.00)">Add To Cart</button>
               </div>
             </article>
 
             <article class="product-card">
               <div>
-                <div class="badge">Training</div>
-                <h3 class="product-title">Core Recovery Wrap</h3>
+                <div class="badge">Recovery</div>
+                <h3 class="product-title">Core Compression Kit</h3>
                 <p class="product-desc">
-                  Compression support for post-match recovery, muscle comfort, and easier movement after hard sessions.
+                  Targeted support for lower-body recovery and short-burst acceleration after intense sessions.
                 </p>
               </div>
               <div>
-                <div class="product-price">$32.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Core Recovery Wrap', '32.00')">Add To Cart</button>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div>
-                <div class="badge">Elite Fit</div>
-                <h3 class="product-title">Motion Base Tee</h3>
-                <p class="product-desc">
-                  Lightweight training top with moisture control, shape retention, and unrestricted upper-body motion.
-                </p>
-              </div>
-              <div>
-                <div class="product-price">$39.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Motion Base Tee', '39.00')">Add To Cart</button>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div>
-                <div class="badge">Match Day</div>
-                <h3 class="product-title">Velocity Travel Kit</h3>
-                <p class="product-desc">
-                  A compact bundle for the essentials: socks, tape, wipes, and performance accessories in one kit.
-                </p>
-              </div>
-              <div>
-                <div class="product-price">$58.00 AUD</div>
-                <button class="buy-btn" onclick="addToCart('Velocity Travel Kit', '58.00')">Add To Cart</button>
+                <div class="product-price">$68.00 AUD</div>
+                <button class="buy-btn" onclick="addToCart('Core Compression Kit', 68.00)">Add To Cart</button>
               </div>
             </article>
           </div>
@@ -1048,65 +1003,58 @@
       </section>
 
       <section id="benefits" class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Why athletes choose us</span>
-            <h2>Built to sharpen every movement</h2>
-          </div>
-
-          <div class="benefits">
-            <div class="benefits-panel">
-              <div class="feature-list">
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Premium protection</strong>
-                    <p>Engineered for confident tackles, quick direction changes, and resilient play under pressure.</p>
-                  </div>
+        <div class="container benefits">
+          <div class="benefits-panel">
+            <span class="eyebrow">Why FLAIR</span>
+            <h2>Built for sharp movement and real performance.</h2>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Technology-first design</strong>
+                  <p>Every product is engineered to support speed, comfort, and confidence under pressure.</p>
                 </div>
-
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Lightweight movement</strong>
-                    <p>Functional design that stays breathable, agile, and comfortable from kickoff to full-time.</p>
-                  </div>
+              </div>
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Road-tested comfort</strong>
+                  <p>Flexible builds and breathable structure allow athletes to move without restriction.</p>
                 </div>
-
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Tour-grade performance</strong>
-                    <p>Made for everyday training, club sessions, and high-intensity match environments alike.</p>
-                  </div>
+              </div>
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Elite training essentials</strong>
+                  <p>From recovery aids to on-field support, every FLAIR item supports performance in motion.</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="benefits-panel">
-              <div class="feature-list">
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Better fit</strong>
-                    <p>Comfort-focused sizing and materials keep every session feeling more natural and controlled.</p>
-                  </div>
+          <div class="benefits-panel">
+            <span class="eyebrow">The FLAIR edge</span>
+            <h2>Confidence in every session.</h2>
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Lightweight support</strong>
+                  <p>Minimal bulk with maximum protection where it matters most.</p>
                 </div>
-
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Elite style</strong>
-                    <p>Clean, modern energy with a bold identity designed to stand out without sacrificing function.</p>
-                  </div>
+              </div>
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Premium materials</strong>
+                  <p>Built to hold up through intense matches, sessions, and travel.</p>
                 </div>
-
-                <div class="feature-item">
-                  <div class="check">✓</div>
-                  <div>
-                    <strong>Everyday value</strong>
-                    <p>High-quality essentials at accessible pricing so athletes can build a full setup without compromise.</p>
-                  </div>
+              </div>
+              <div class="feature-item">
+                <div class="check">✓</div>
+                <div>
+                  <strong>Identity-driven style</strong>
+                  <p>Clean, experimental forms designed to look as good as they perform.</p>
                 </div>
               </div>
             </div>
@@ -1118,32 +1066,28 @@
         <div class="container">
           <div class="section-header">
             <span class="eyebrow">How it works</span>
-            <h2>Simple, fast, performance-first</h2>
+            <h2>From cart to pitch</h2>
           </div>
-
           <div class="process-grid">
             <div class="process-step">
               <div class="step-number">1</div>
-              <h3>Choose your gear</h3>
-              <p>Select the essentials that match your training, style, and playing needs.</p>
+              <h3>Pick gear</h3>
+              <p>Choose the essentials that fit your style and performance needs.</p>
             </div>
-
             <div class="process-step">
               <div class="step-number">2</div>
               <h3>Add to cart</h3>
-              <p>Build your collection with one click, stored securely in your browser.</p>
+              <p>Collect your products and review your cart before checkout.</p>
             </div>
-
             <div class="process-step">
               <div class="step-number">3</div>
-              <h3>Review order</h3>
-              <p>Check your cart, confirm your items, and prepare your email order.</p>
+              <h3>Secure checkout</h3>
+              <p>Pay with PayPal using the secure checkout flow tied to your merchant account.</p>
             </div>
-
             <div class="process-step">
               <div class="step-number">4</div>
-              <h3>Send & track</h3>
-              <p>Email your order directly to us and receive tracking updates within 24h.</p>
+              <h3>Fast dispatch</h3>
+              <p>Your order is prepared and shipped quickly to get you moving again.</p>
             </div>
           </div>
         </div>
@@ -1152,46 +1096,43 @@
       <section id="reviews" class="section">
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Player feedback</span>
-            <h2>Trusted by athletes</h2>
+            <span class="eyebrow">Player reviews</span>
+            <h2>Trusted by athletes.</h2>
           </div>
-
           <div class="testimonial-grid">
-            <div class="testimonial">
+            <article class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>"The shin pads are lightweight but incredibly protective. I felt the difference in my game immediately. Best investment."</p>
+              <p>“The fit is elite and the support feels premium without being heavy. You can tell the design team understands game-day movement.”</p>
               <div class="person">
-                <div class="avatar">J</div>
+                <div class="avatar">L</div>
                 <div>
-                  <strong>Jake M.</strong>
-                  <span>Striker, Sydney FC</span>
+                  <strong>Leo M.</strong>
+                  <span>Midfielder</span>
                 </div>
               </div>
-            </div>
-
-            <div class="testimonial">
+            </article>
+            <article class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>"Pro Grip Socks changed everything. No more sliding, maximum confidence. I'll never play without them."</p>
+              <p>“The compression gear makes a real difference after training. It feels structured and clean, without the bulk of older kits.”</p>
               <div class="person">
                 <div class="avatar">A</div>
                 <div>
-                  <strong>Alex T.</strong>
-                  <span>Defender, Perth Glory</span>
+                  <strong>Arlo T.</strong>
+                  <span>Fullback</span>
                 </div>
               </div>
-            </div>
-
-            <div class="testimonial">
+            </article>
+            <article class="testimonial">
               <div class="stars">★★★★★</div>
-              <p>"The Flow State Strips are game-changing. Better breathing, sharper focus, and sustained stamina. Highly recommend."</p>
+              <p>“FLAIR balances protection and style better than most brands. This is the first kit I’ve worn that feels both athletic and premium.”</p>
               <div class="person">
-                <div class="avatar">M</div>
+                <div class="avatar">D</div>
                 <div>
-                  <strong>Marcus L.</strong>
-                  <span>Midfielder, Brisbane Roar</span>
+                  <strong>Dean P.</strong>
+                  <span>Striker</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1199,241 +1140,231 @@
       <section id="faq" class="section">
         <div class="container">
           <div class="section-header">
-            <span class="eyebrow">Questions?</span>
-            <h2>Frequently asked</h2>
+            <span class="eyebrow">FAQ</span>
+            <h2>Everything you need to know.</h2>
           </div>
-
           <div class="faq-wrap">
             <div class="faq-item">
-              <h3>How do I order?</h3>
-              <p>Add items to your cart, review your order, and send it to us via email. We'll confirm and process within 24h.</p>
+              <h3>Do you ship worldwide?</h3>
+              <p>Yes. FLAIR ships internationally, with delivery windows depending on your region and selected products.</p>
             </div>
-
             <div class="faq-item">
-              <h3>What's the shipping time?</h3>
-              <p>We offer 48-hour fast dispatch on all orders. Standard delivery is 3-5 business days within Australia.</p>
+              <h3>Is the checkout secure?</h3>
+              <p>Yes. The site uses PayPal checkout, so your customer payment details are processed securely by PayPal, not stored on this page.</p>
             </div>
-
             <div class="faq-item">
-              <h3>Do you ship internationally?</h3>
-              <p>Currently shipping to Australia. International orders coming soon—check back for updates.</p>
+              <h3>Can I use my PayPal account?</h3>
+              <p>Absolutely. Customers can pay with a linked PayPal account or any approved PayPal payment method available in their wallet.</p>
             </div>
-
             <div class="faq-item">
-              <h3>What if items don't fit?</h3>
-              <p>30-day returns on all items. If something doesn't feel right, send it back for an exchange or refund.</p>
-            </div>
-
-            <div class="faq-item">
-              <h3>Are items customizable?</h3>
-              <p>Yes! Contact us after placing your order to discuss sizing, color variations, or bulk team orders.</p>
-            </div>
-
-            <div class="faq-item">
-              <h3>How can I contact support?</h3>
-              <p>Email us directly from your cart, or reach out via Instagram @flairfootball for quick responses.</p>
+              <h3>How quickly do orders ship?</h3>
+              <p>Orders are usually processed within 48 hours and dispatched quickly so players can get back to training sooner.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container cta">
-          <h2>Ready to elevate your game?</h2>
-          <p>Join thousands of players moving with purpose. Start building your FLAIR collection today.</p>
-          <button class="primary-btn" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        <div class="container">
+          <div class="cta">
+            <span class="eyebrow">Ready to move</span>
+            <h2>Step into your next level.</h2>
+            <p>Play sharper, feel lighter, and lock in gear that matches your game-day identity. Start building your setup now.</p>
+            <a href="#shop" class="primary-btn">Shop the range</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container footer-wrap">
-        <div class="nav-brand">
-          <span class="nav-mark" aria-hidden="true"></span>
-          <span>FLAIR</span>
-        </div>
+        <div>© 2026 FLAIR</div>
         <div class="footer-links">
           <a href="#shop">Shop</a>
-          <a href="#benefits">Benefits</a>
+          <a href="#benefits">Performance</a>
+          <a href="#process">How It Works</a>
           <a href="#faq">FAQ</a>
-          <a href="mailto:ibrahimabdisalam961@gmail.com">Contact</a>
-          <a href="#" onclick="alert('Privacy Policy coming soon')">Privacy</a>
         </div>
       </div>
     </footer>
 
-    <!-- Cart Modal -->
-    <div id="cartModal" class="modal">
+    <div class="modal" id="cartModal" aria-modal="true" role="dialog">
       <div class="modal-content">
-        <h2>Your Cart</h2>
-        <div id="cartItems" class="cart-list">
-          <p style="text-align: center; color: var(--muted);">Your cart is empty</p>
+        <h2>Your cart</h2>
+        <div id="cartList" class="cart-list"></div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cartTotal">$0.00 AUD</span>
         </div>
-        <p id="cartTotal" style="text-align: right; font-size: 1.2rem; font-weight: 900; color: var(--text);">Total: $0.00</p>
-        <p style="color: var(--muted); font-size: 0.9rem;">Ready to checkout? Send your order directly to us via email.</p>
+
+        <label for="customerName" style="display:block; margin-top:16px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Full name</label>
+        <input id="customerName" class="checkout-field" type="text" placeholder="Your name" />
+
+        <label for="customerEmail" style="display:block; margin-top:16px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Email</label>
+        <input id="customerEmail" class="checkout-field" type="email" placeholder="you@example.com" />
+
+        <div class="helper-text">Card details are not stored on this site. PayPal handles the payment securely with your merchant account.</div>
+        <div id="paypal-button-container"></div>
+
         <div class="modal-actions">
-          <button class="primary-btn" onclick="sendAllEmailOrder()">Send Email Order</button>
-          <button class="secondary-btn" onclick="closeCart()">Continue Shopping</button>
+          <button class="secondary-btn" type="button" onclick="closeCart()">Keep shopping</button>
         </div>
       </div>
     </div>
 
     <script>
-      let cart = JSON.parse(localStorage.getItem('flair_cart')) || [];
+      const PAYPAL_CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID';
+      const cartKey = 'flairCart';
+      let cart = JSON.parse(localStorage.getItem(cartKey) || '[]');
+      let paypalButtonsInitialized = false;
 
-      function addToCart(productName, price) {
-        const item = {
-          name: productName,
-          price: price,
-          quantity: 1
-        };
-
-        const existing = cart.find(i => i.name === productName);
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push(item);
-        }
-
-        localStorage.setItem('flair_cart', JSON.stringify(cart));
+      function saveCart() {
+        localStorage.setItem(cartKey, JSON.stringify(cart));
         updateCartBadge();
-        
-        // Visual feedback
-        event.target.innerText = '✓ Added!';
-        event.target.style.background = 'var(--success)';
-        setTimeout(() => {
-          event.target.innerText = 'Add To Cart';
-          event.target.style.background = '';
-        }, 1500);
+        renderCart();
       }
 
       function updateCartBadge() {
         const badge = document.getElementById('cartCount');
-        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
-        if (count > 0) {
-          badge.innerText = count;
-          badge.style.display = 'flex';
-        } else {
-          badge.style.display = 'none';
+        const count = cart.length;
+        badge.textContent = count;
+        badge.style.display = count > 0 ? 'flex' : 'none';
+      }
+
+      function addToCart(name, price) {
+        cart.push({ name, price: Number(price) });
+        saveCart();
+        openCart();
+        alert(`${name} added to cart.`);
+      }
+
+      function renderCart() {
+        const cartList = document.getElementById('cartList');
+        const cartTotal = document.getElementById('cartTotal');
+        if (!cart.length) {
+          cartList.innerHTML = '<p style="margin:0; color: var(--muted);">Your cart is empty.</p>';
+          cartTotal.textContent = '$0.00 AUD';
+          return;
         }
+
+        const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
+        cartList.innerHTML = cart
+          .map(
+            (item) => `
+              <div class="cart-item">
+                <strong>${item.name}</strong>
+                <span>$${Number(item.price).toFixed(2)} AUD</span>
+              </div>
+            `
+          )
+          .join('');
+        cartTotal.textContent = `$${total.toFixed(2)} AUD`;
       }
 
       function openCart() {
         const modal = document.getElementById('cartModal');
-        const cartItems = document.getElementById('cartItems');
-        const cartTotal = document.getElementById('cartTotal');
-
-        if (cart.length === 0) {
-          cartItems.innerHTML = '<p style="text-align: center; color: var(--muted);">Your cart is empty</p>';
-          cartTotal.innerText = 'Total: $0.00';
-        } else {
-          let html = '';
-          let total = 0;
-
-          cart.forEach((item, index) => {
-            const price = parseFloat(item.price);
-            const itemTotal = price * item.quantity;
-            total += itemTotal;
-
-            html += `
-              <div class="cart-item">
-                <div>
-                  <strong>${item.name}</strong><br>
-                  $${price.toFixed(2)} AUD × ${item.quantity}
-                </div>
-                <div>
-                  <strong>$${itemTotal.toFixed(2)}</strong>
-                  <button onclick="removeFromCart(${index})" style="margin-left: 10px; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.8rem;">Remove</button>
-                </div>
-              </div>
-            `;
-          });
-
-          cartItems.innerHTML = html;
-          cartTotal.innerText = `Total: $${total.toFixed(2)} AUD`;
-        }
-
         modal.classList.add('active');
+        renderCart();
       }
 
       function closeCart() {
-        document.getElementById('cartModal').classList.remove('active');
+        const modal = document.getElementById('cartModal');
+        modal.classList.remove('active');
       }
 
-      function removeFromCart(index) {
-        cart.splice(index, 1);
-        localStorage.setItem('flair_cart', JSON.stringify(cart));
-        updateCartBadge();
-        openCart();
+      function getCartTotal() {
+        return cart.reduce((sum, item) => sum + Number(item.price), 0);
       }
 
-      function sendEmailOrder(productName, price) {
-        const storeEmail = "ibrahimabdisalam961@gmail.com";
-        const subject = encodeURIComponent(`New Order Request: ${productName}`);
-        
-        const emailBody = encodeURIComponent(
-            `Hi Ibrahim,\n\n` +
-            `I want to buy the following item from the FLAIR Store:\n` +
-            `-----------------------------------------\n` +
-            `Product: ${productName}\n` +
-            `Price: $${price} AUD\n` +
-            `-----------------------------------------\n\n` +
-            `Please reply to this email to confirm availability and arrange payment details.\n\n` +
-            `My Shipping Address:\n` +
-            `Name:\n` +
-            `Street:\n` +
-            `City/State/Postcode:\n`
-        );
-
-        window.location.href = `mailto:${storeEmail}?subject=${subject}&body=${emailBody}`;
-      }
-
-      function sendAllEmailOrder() {
-        if (cart.length === 0) {
-          alert('Your cart is empty. Add items before ordering.');
+      function setupPayPalButtons() {
+        if (paypalButtonsInitialized || PAYPAL_CLIENT_ID === 'YOUR_PAYPAL_CLIENT_ID') {
           return;
         }
 
-        const storeEmail = "ibrahimabdisalam961@gmail.com";
-        let total = 0;
-        let orderList = '';
+        paypalButtonsInitialized = true;
+        if (!window.paypal) {
+          console.warn('PayPal SDK not loaded');
+          return;
+        }
 
-        cart.forEach(item => {
-          const price = parseFloat(item.price);
-          const itemTotal = price * item.quantity;
-          total += itemTotal;
-          orderList += `- ${item.name} (${item.quantity}x) - $${price.toFixed(2)} AUD each = $${itemTotal.toFixed(2)} AUD\n`;
-        });
+        const container = document.getElementById('paypal-button-container');
+        container.innerHTML = '';
 
-        const subject = encodeURIComponent(`New FLAIR Order - $${total.toFixed(2)} AUD`);
-        
-        const emailBody = encodeURIComponent(
-            `Hi Ibrahim,\n\n` +
-            `I want to buy the following items from the FLAIR Store:\n` +
-            `-----------------------------------------\n` +
-            orderList +
-            `-----------------------------------------\n` +
-            `TOTAL: $${total.toFixed(2)} AUD\n\n` +
-            `Please reply to this email to confirm availability and arrange payment details.\n\n` +
-            `My Shipping Address:\n` +
-            `Name:\n` +
-            `Street:\n` +
-            `City/State/Postcode:\n`
-        );
+        window.paypal.Buttons({
+          style: {
+            layout: 'vertical',
+            color: 'blue',
+            shape: 'pill',
+            label: 'pay'
+          },
+          createOrder: function (data, actions) {
+            const total = getCartTotal();
+            if (!cart.length) {
+              alert('Your cart is empty.');
+              return null;
+            }
 
-        window.location.href = `mailto:${storeEmail}?subject=${subject}&body=${emailBody}`;
+            return actions.order.create({
+              purchase_units: [{
+                amount: {
+                  currency_code: 'AUD',
+                  value: total.toFixed(2),
+                  breakdown: {
+                    item_total: { currency_code: 'AUD', value: total.toFixed(2) }
+                  }
+                },
+                description: cart.map(item => item.name).join(', ')
+              }]
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              const customerName = document.getElementById('customerName').value.trim();
+              const customerEmail = document.getElementById('customerEmail').value.trim();
+
+              const message =
+                `Payment successful for ${customerName || 'customer'} (${customerEmail || 'no email provided'}).\n` +
+                `PayPal order: ${details.id}\n` +
+                `Customer: ${details.payer.name.given_name} ${details.payer.name.surname}`;
+
+              alert(message);
+              cart = [];
+              saveCart();
+              closeCart();
+            });
+          },
+          onError: function () {
+            alert('There was a problem processing your PayPal payment. Please try again.');
+          }
+        }).render('#paypal-button-container');
       }
 
-      // Update cart badge on page load
-      updateCartBadge();
+      function loadPayPalSdk() {
+        if (PAYPAL_CLIENT_ID === 'YOUR_PAYPAL_CLIENT_ID') {
+          return;
+        }
 
-      // Close modal when clicking outside
-      window.onclick = function(event) {
+        const script = document.createElement('script');
+        script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=AUD`;
+        script.async = true;
+        script.onload = function () {
+          setupPayPalButtons();
+        };
+        document.body.appendChild(script);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        updateCartBadge();
+        renderCart();
+        loadPayPalSdk();
+      });
+
+      window.onclick = function (event) {
         const modal = document.getElementById('cartModal');
         if (event.target === modal) {
-          modal.classList.remove('active');
+          closeCart();
         }
-      }
+      };
     </script>
   </body>
 </html>
