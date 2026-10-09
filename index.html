@@ -223,156 +223,6 @@
         text-transform: uppercase;
       }
 
-      .hero-visual { position: relative; }
-      .visual-card {
-        position: relative;
-        background: linear-gradient(180deg, rgba(19,22,27,0.93), rgba(15,16,19,0.96));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        padding: 24px;
-        box-shadow: 0 22px 60px rgba(0,0,0,0.45);
-      }
-
-      .visual-panel {
-        background: linear-gradient(160deg, rgba(0,210,255,0.12), rgba(0,114,255,0.08));
-        border: 1px solid rgba(0,210,255,0.2);
-        border-radius: 24px;
-        padding: 24px;
-        min-height: 480px;
-        display: flex;
-        align-items: end;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .visual-panel::before {
-        content: "";
-        position: absolute;
-        inset: 14% 15% auto auto;
-        width: 150px;
-        height: 150px;
-        background: rgba(0,210,255,0.14);
-        filter: blur(18px);
-        border-radius: 50%;
-      }
-
-      .product-showcase {
-        position: relative;
-        width: 100%;
-        min-height: 420px;
-      }
-
-      .showcase-box {
-        position: absolute;
-        bottom: 0;
-        right: 18%;
-        width: 60%;
-        height: 220px;
-        background: linear-gradient(135deg, #10151c, #242c34);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 26px;
-        box-shadow: 0 30px 60px rgba(0,0,0,0.55);
-        transform: rotate(-10deg);
-      }
-
-      .showcase-box:nth-child(2) {
-        right: 4%;
-        bottom: 42px;
-        width: 48%;
-        height: 220px;
-        background: linear-gradient(135deg, #171d26, #0b0d12);
-        transform: rotate(12deg);
-      }
-
-      .showcase-box:nth-child(3) {
-        left: 8%;
-        bottom: 8px;
-        width: 34%;
-        height: 180px;
-        background: linear-gradient(135deg, #11151a, #1b2730);
-        transform: rotate(-5deg);
-      }
-
-      .showcase-tag {
-        position: absolute;
-        left: 24px;
-        top: 18px;
-        background: rgba(0,0,0,0.28);
-        border: 1px solid rgba(255,255,255,0.08);
-        color: var(--light);
-        padding: 8px 12px;
-        border-radius: 999px;
-        font-size: 0.7rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
-      .feature-strip {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 35px;
-      }
-
-      .mini-feature {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px 18px 16px;
-      }
-
-      .mini-feature strong {
-        display: block;
-        color: var(--light);
-        margin-bottom: 8px;
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .mini-feature span {
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .trust-bar {
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        background: rgba(255,255,255,0.015);
-      }
-
-      .trust-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 18px;
-        padding: 32px 0;
-      }
-
-      .trust-item { text-align: center; }
-      .trust-item strong {
-        display: block;
-        font-size: clamp(1.5rem, 2vw, 2.2rem);
-        margin-bottom: 8px;
-      }
-      .trust-item span {
-        color: var(--muted);
-        font-size: 0.75rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .section-header { margin-bottom: 36px; }
-      .section-header h2 {
-        font-size: clamp(2rem, 4vw, 3.1rem);
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 14px;
-      }
-      .section-header p {
-        max-width: 700px;
-        color: var(--muted);
-      }
-
       .product-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -446,222 +296,6 @@
       }
 
       .buy-btn:hover { background: var(--accent); }
-
-      .benefits {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 28px;
-        align-items: stretch;
-      }
-
-      .benefits-panel {
-        background: linear-gradient(180deg, rgba(16,19,24,0.96), rgba(11,12,16,0.96));
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        padding: 28px;
-      }
-
-      .feature-list {
-        display: grid;
-        gap: 16px;
-        margin-top: 20px;
-      }
-
-      .feature-item {
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        padding: 16px;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        background: rgba(255,255,255,0.02);
-      }
-
-      .check {
-        flex: 0 0 28px;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #02050b;
-        display: grid;
-        place-items: center;
-        font-weight: 900;
-        margin-top: 2px;
-      }
-
-      .feature-item strong {
-        display: block;
-        margin-bottom: 5px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-
-      .feature-item p {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .process-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .process-step {
-        background: linear-gradient(180deg, var(--panel), var(--panel-2));
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 22px 18px;
-      }
-
-      .step-number {
-        display: inline-flex;
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        font-weight: 900;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #05070b;
-        margin-bottom: 16px;
-      }
-
-      .process-step h3 {
-        margin-bottom: 8px;
-        font-size: 1rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .process-step p {
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-
-      .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px;
-      }
-
-      .testimonial {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 20px;
-        padding: 20px 18px;
-      }
-
-      .stars {
-        color: var(--warning);
-        letter-spacing: 0.12em;
-        margin-bottom: 14px;
-      }
-
-      .testimonial p {
-        color: var(--muted);
-        margin-bottom: 18px;
-      }
-
-      .person {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .avatar {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #02060b;
-        display: grid;
-        place-items: center;
-        font-weight: 900;
-      }
-
-      .person strong {
-        display: block;
-        font-size: 0.85rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .person span {
-        color: var(--muted);
-        font-size: 0.74rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .faq-wrap {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 22px;
-      }
-
-      .faq-item {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 20px 20px 18px;
-      }
-
-      .faq-item h3 {
-        margin-bottom: 10px;
-        font-size: 1rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .faq-item p { color: var(--muted); }
-
-      .cta {
-        text-align: center;
-        background: linear-gradient(145deg, rgba(0,210,255,0.08), rgba(0,114,255,0.08));
-        border: 1px solid rgba(0,210,255,0.18);
-        border-radius: 28px;
-        padding: 42px 28px;
-      }
-
-      .cta h2 {
-        font-size: clamp(2.1rem, 4vw, 3.2rem);
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 16px;
-      }
-
-      .cta p {
-        max-width: 700px;
-        margin: 0 auto 24px;
-        color: var(--muted);
-      }
-
-      footer {
-        border-top: 1px solid var(--line);
-        padding: 28px 0 48px;
-        color: var(--muted);
-      }
-
-      .footer-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .footer-links a:hover { color: var(--accent); }
 
       .modal {
         display: none;
@@ -765,11 +399,6 @@
         transition: all 0.2s ease;
       }
 
-      .modal-actions .primary-btn {
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: #030406;
-      }
-
       .modal-actions .secondary-btn {
         border: 1px solid var(--line);
         background: rgba(255,255,255,0.02);
@@ -788,30 +417,11 @@
       }
 
       @media (max-width: 980px) {
-        .hero-grid,
-        .benefits,
-        .faq-wrap,
-        .testimonial-grid,
-        .process-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .hero-grid { grid-template-columns: 1fr; }
         .nav-links { display: none; }
       }
 
       @media (max-width: 680px) {
         .section { padding: 72px 0; }
-        .feature-strip,
-        .trust-grid,
-        .benefits,
-        .faq-wrap,
-        .testimonial-grid,
-        .process-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-copy h1 { letter-spacing: 0.04em; }
         .nav { justify-content: center; }
         .nav-cta { display: none; }
         .modal-content { padding: 24px; }
@@ -892,45 +502,9 @@
                 </div>
               </div>
             </div>
-
-            <div class="feature-strip">
-              <div class="mini-feature">
-                <strong>Grip</strong>
-                <span>Boot stability and traction</span>
-              </div>
-              <div class="mini-feature">
-                <strong>Protection</strong>
-                <span>Lightweight support</span>
-              </div>
-              <div class="mini-feature">
-                <strong>Flow</strong>
-                <span>Breathable performance fit</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-
-      <div class="trust-bar">
-        <div class="container trust-grid">
-          <div class="trust-item">
-            <strong>99%</strong>
-            <span>Comfort fit</span>
-          </div>
-          <div class="trust-item">
-            <strong>3x</strong>
-            <span>Speed boost</span>
-          </div>
-          <div class="trust-item">
-            <strong>24/7</strong>
-            <span>Player support</span>
-          </div>
-          <div class="trust-item">
-            <strong>AUD</strong>
-            <span>Australian made</span>
-          </div>
-        </div>
-      </div>
 
       <section id="shop" class="section">
         <div class="container">
@@ -1001,210 +575,29 @@
           </div>
         </div>
       </section>
-
-      <section id="benefits" class="section">
-        <div class="container benefits">
-          <div class="benefits-panel">
-            <span class="eyebrow">Why FLAIR</span>
-            <h2>Built for sharp movement and real performance.</h2>
-            <div class="feature-list">
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Technology-first design</strong>
-                  <p>Every product is engineered to support speed, comfort, and confidence under pressure.</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Road-tested comfort</strong>
-                  <p>Flexible builds and breathable structure allow athletes to move without restriction.</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Elite training essentials</strong>
-                  <p>From recovery aids to on-field support, every FLAIR item supports performance in motion.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="benefits-panel">
-            <span class="eyebrow">The FLAIR edge</span>
-            <h2>Confidence in every session.</h2>
-            <div class="feature-list">
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Lightweight support</strong>
-                  <p>Minimal bulk with maximum protection where it matters most.</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Premium materials</strong>
-                  <p>Built to hold up through intense matches, sessions, and travel.</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <div class="check">✓</div>
-                <div>
-                  <strong>Identity-driven style</strong>
-                  <p>Clean, experimental forms designed to look as good as they perform.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="process" class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">How it works</span>
-            <h2>From cart to pitch</h2>
-          </div>
-          <div class="process-grid">
-            <div class="process-step">
-              <div class="step-number">1</div>
-              <h3>Pick gear</h3>
-              <p>Choose the essentials that fit your style and performance needs.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">2</div>
-              <h3>Add to cart</h3>
-              <p>Collect your products and review your cart before checkout.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">3</div>
-              <h3>Secure checkout</h3>
-              <p>Pay with PayPal using the secure checkout flow tied to your merchant account.</p>
-            </div>
-            <div class="process-step">
-              <div class="step-number">4</div>
-              <h3>Fast dispatch</h3>
-              <p>Your order is prepared and shipped quickly to get you moving again.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Player reviews</span>
-            <h2>Trusted by athletes.</h2>
-          </div>
-          <div class="testimonial-grid">
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <p>“The fit is elite and the support feels premium without being heavy. You can tell the design team understands game-day movement.”</p>
-              <div class="person">
-                <div class="avatar">L</div>
-                <div>
-                  <strong>Leo M.</strong>
-                  <span>Midfielder</span>
-                </div>
-              </div>
-            </article>
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <p>“The compression gear makes a real difference after training. It feels structured and clean, without the bulk of older kits.”</p>
-              <div class="person">
-                <div class="avatar">A</div>
-                <div>
-                  <strong>Arlo T.</strong>
-                  <span>Fullback</span>
-                </div>
-              </div>
-            </article>
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <p>“FLAIR balances protection and style better than most brands. This is the first kit I’ve worn that feels both athletic and premium.”</p>
-              <div class="person">
-                <div class="avatar">D</div>
-                <div>
-                  <strong>Dean P.</strong>
-                  <span>Striker</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">FAQ</span>
-            <h2>Everything you need to know.</h2>
-          </div>
-          <div class="faq-wrap">
-            <div class="faq-item">
-              <h3>Do you ship worldwide?</h3>
-              <p>Yes. FLAIR ships internationally, with delivery windows depending on your region and selected products.</p>
-            </div>
-            <div class="faq-item">
-              <h3>Is the checkout secure?</h3>
-              <p>Yes. The site uses PayPal checkout, so your customer payment details are processed securely by PayPal, not stored on this page.</p>
-            </div>
-            <div class="faq-item">
-              <h3>Can I use my PayPal account?</h3>
-              <p>Absolutely. Customers can pay with a linked PayPal account or any approved PayPal payment method available in their wallet.</p>
-            </div>
-            <div class="faq-item">
-              <h3>How quickly do orders ship?</h3>
-              <p>Orders are usually processed within 48 hours and dispatched quickly so players can get back to training sooner.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="cta">
-            <span class="eyebrow">Ready to move</span>
-            <h2>Step into your next level.</h2>
-            <p>Play sharper, feel lighter, and lock in gear that matches your game-day identity. Start building your setup now.</p>
-            <a href="#shop" class="primary-btn">Shop the range</a>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <footer>
-      <div class="container footer-wrap">
-        <div>© 2026 FLAIR</div>
-        <div class="footer-links">
-          <a href="#shop">Shop</a>
-          <a href="#benefits">Performance</a>
-          <a href="#process">How It Works</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-    </footer>
-
-    <div class="modal" id="cartModal" aria-modal="true" role="dialog">
+    <div class="modal" id="checkoutModal" aria-modal="true" role="dialog">
       <div class="modal-content">
-        <h2>Your cart</h2>
-        <div id="cartList" class="cart-list"></div>
+        <h2>Checkout</h2>
+        <p>Secure checkout is powered by PayPal. We do not store card details on this site.</p>
+
+        <div class="cart-list" id="checkoutItems"></div>
         <div class="cart-total">
           <span>Total</span>
-          <span id="cartTotal">$0.00 AUD</span>
+          <span id="checkoutTotal">$0.00</span>
         </div>
 
-        <label for="customerName" style="display:block; margin-top:16px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Full name</label>
-        <input id="customerName" class="checkout-field" type="text" placeholder="Your name" />
+        <input
+          id="customerEmail"
+          class="checkout-field"
+          type="email"
+          placeholder="Email address"
+          aria-label="Email address"
+        />
 
-        <label for="customerEmail" style="display:block; margin-top:16px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">Email</label>
-        <input id="customerEmail" class="checkout-field" type="email" placeholder="you@example.com" />
-
-        <div class="helper-text">Card details are not stored on this site. PayPal handles the payment securely with your merchant account.</div>
         <div id="paypal-button-container"></div>
+        <p class="helper-text">You will be redirected to PayPal to securely complete your payment.</p>
 
         <div class="modal-actions">
           <button class="secondary-btn" type="button" onclick="closeCart()">Keep shopping</button>
@@ -1214,157 +607,162 @@
 
     <script>
       const PAYPAL_CLIENT_ID = 'YOUR_PAYPAL_CLIENT_ID';
-      const cartKey = 'flairCart';
-      let cart = JSON.parse(localStorage.getItem(cartKey) || '[]');
-      let paypalButtonsInitialized = false;
+      const cart = [];
 
-      function saveCart() {
-        localStorage.setItem(cartKey, JSON.stringify(cart));
-        updateCartBadge();
-        renderCart();
+      function formatMoney(value) {
+        return new Intl.NumberFormat('en-AU', {
+          style: 'currency',
+          currency: 'AUD'
+        }).format(value);
+      }
+
+      function getCartTotal() {
+        return cart.reduce((total, item) => total + Number(item.price || 0), 0);
       }
 
       function updateCartBadge() {
         const badge = document.getElementById('cartCount');
+        if (!badge) return;
         const count = cart.length;
         badge.textContent = count;
         badge.style.display = count > 0 ? 'flex' : 'none';
       }
 
-      function addToCart(name, price) {
-        cart.push({ name, price: Number(price) });
-        saveCart();
-        openCart();
-        alert(`${name} added to cart.`);
-      }
-
       function renderCart() {
-        const cartList = document.getElementById('cartList');
-        const cartTotal = document.getElementById('cartTotal');
+        const list = document.getElementById('checkoutItems');
+        const total = document.getElementById('checkoutTotal');
+        if (!list || !total) return;
+
         if (!cart.length) {
-          cartList.innerHTML = '<p style="margin:0; color: var(--muted);">Your cart is empty.</p>';
-          cartTotal.textContent = '$0.00 AUD';
+          list.innerHTML = '<div class="cart-item"><span>Your cart is empty</span><strong>$0.00</strong></div>';
+          total.textContent = '$0.00';
+          updateCartBadge();
           return;
         }
 
-        const total = cart.reduce((sum, item) => sum + Number(item.price), 0);
-        cartList.innerHTML = cart
-          .map(
-            (item) => `
-              <div class="cart-item">
-                <strong>${item.name}</strong>
-                <span>$${Number(item.price).toFixed(2)} AUD</span>
-              </div>
-            `
-          )
-          .join('');
-        cartTotal.textContent = `$${total.toFixed(2)} AUD`;
+        list.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <span><strong>${item.name}</strong></span>
+            <span>${formatMoney(item.price)}</span>
+          </div>
+        `).join('');
+
+        total.textContent = formatMoney(getCartTotal());
+        updateCartBadge();
+      }
+
+      function addToCart(name, price) {
+        cart.push({ name, price: Number(price) });
+        renderCart();
+        openCart();
       }
 
       function openCart() {
-        const modal = document.getElementById('cartModal');
-        modal.classList.add('active');
+        const modal = document.getElementById('checkoutModal');
+        if (!modal) return;
         renderCart();
+        modal.classList.add('active');
+        initPayPalButtons();
       }
 
       function closeCart() {
-        const modal = document.getElementById('cartModal');
+        const modal = document.getElementById('checkoutModal');
+        if (!modal) return;
         modal.classList.remove('active');
       }
 
-      function getCartTotal() {
-        return cart.reduce((sum, item) => sum + Number(item.price), 0);
+      function getCustomerEmail() {
+        const emailInput = document.getElementById('customerEmail');
+        return emailInput ? emailInput.value.trim() : '';
       }
 
-      function setupPayPalButtons() {
-        if (paypalButtonsInitialized || PAYPAL_CLIENT_ID === 'YOUR_PAYPAL_CLIENT_ID') {
-          return;
+      function validateCheckoutForm() {
+        const email = getCustomerEmail();
+        if (!cart.length) {
+          alert('Your cart is empty.');
+          return false;
         }
-
-        paypalButtonsInitialized = true;
-        if (!window.paypal) {
-          console.warn('PayPal SDK not loaded');
-          return;
+        if (!email || !email.includes('@')) {
+          alert('Please enter a valid email address before continuing to PayPal.');
+          return false;
         }
+        return true;
+      }
 
+      function renderPayPalButton() {
         const container = document.getElementById('paypal-button-container');
-        container.innerHTML = '';
+        if (!container) return;
 
-        window.paypal.Buttons({
+        if (!PAYPAL_CLIENT_ID || PAYPAL_CLIENT_ID.includes('YOUR_PAYPAL')) {
+          container.innerHTML = '<p class="helper-text">Update PAYPAL_CLIENT_ID in this file with your PayPal Business client ID before publishing live.</p>';
+          return;
+        }
+
+        if (typeof window.paypal === 'undefined') {
+          const script = document.createElement('script');
+          script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=AUD&intent=capture`;
+          script.onload = renderPayPalButton;
+          document.body.appendChild(script);
+          return;
+        }
+
+        if (container.dataset.rendered === 'true') return;
+
+        const paypalButtons = window.paypal.Buttons({
           style: {
             layout: 'vertical',
             color: 'blue',
             shape: 'pill',
-            label: 'pay'
+            label: 'paypal'
           },
           createOrder: function (data, actions) {
-            const total = getCartTotal();
-            if (!cart.length) {
-              alert('Your cart is empty.');
+            if (!validateCheckoutForm()) {
               return null;
             }
 
             return actions.order.create({
               purchase_units: [{
+                description: cart.length > 1 ? `${cart.length} products from FLAIR` : cart[0].name,
                 amount: {
                   currency_code: 'AUD',
-                  value: total.toFixed(2),
-                  breakdown: {
-                    item_total: { currency_code: 'AUD', value: total.toFixed(2) }
-                  }
-                },
-                description: cart.map(item => item.name).join(', ')
+                  value: getCartTotal().toFixed(2)
+                }
               }]
             });
           },
           onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
-              const customerName = document.getElementById('customerName').value.trim();
-              const customerEmail = document.getElementById('customerEmail').value.trim();
+              const customerEmail = getCustomerEmail();
+              const payerName = details.payer?.name?.given_name || 'Customer';
 
-              const message =
-                `Payment successful for ${customerName || 'customer'} (${customerEmail || 'no email provided'}).\n` +
-                `PayPal order: ${details.id}\n` +
-                `Customer: ${details.payer.name.given_name} ${details.payer.name.surname}`;
-
-              alert(message);
-              cart = [];
-              saveCart();
+              alert(`Thanks ${payerName}! Your PayPal payment was successful. A receipt will be sent to ${customerEmail}.`);
+              cart.length = 0;
+              renderCart();
               closeCart();
             });
           },
-          onError: function () {
-            alert('There was a problem processing your PayPal payment. Please try again.');
+          onCancel: function () {
+            alert('Checkout cancelled.');
+          },
+          onError: function (err) {
+            console.error(err);
+            alert('There was a problem with the PayPal checkout. Please try again.');
           }
-        }).render('#paypal-button-container');
+        });
+
+        paypalButtons.render('#paypal-button-container');
+        container.dataset.rendered = 'true';
       }
 
-      function loadPayPalSdk() {
-        if (PAYPAL_CLIENT_ID === 'YOUR_PAYPAL_CLIENT_ID') {
-          return;
-        }
-
-        const script = document.createElement('script');
-        script.src = `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}&currency=AUD`;
-        script.async = true;
-        script.onload = function () {
-          setupPayPalButtons();
-        };
-        document.body.appendChild(script);
+      function initPayPalButtons() {
+        renderCart();
+        renderPayPalButton();
       }
 
       document.addEventListener('DOMContentLoaded', function () {
         updateCartBadge();
         renderCart();
-        loadPayPalSdk();
       });
-
-      window.onclick = function (event) {
-        const modal = document.getElementById('cartModal');
-        if (event.target === modal) {
-          closeCart();
-        }
-      };
     </script>
   </body>
 </html>
