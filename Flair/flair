@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FLAIR | Football Performance Identity</title>
+<meta name="description" content="FLAIR brings premium football performance gear, elite training essentials, and identity-driven style for players who move with purpose.">
+<meta name="theme-color" content="#0F3D2E">
+<meta property="og:title" content="FLAIR | Football Performance Identity">
+<meta property="og:description" content="Premium football performance gear for players who move with purpose.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2722%27 fill=%27%230F3D2E%27/%3E%3Ctext x=%2750%27 y=%2772%27 font-size=%2770%27 font-weight=%27800%27 text-anchor=%27middle%27 fill=%27%23FFD23F%27 font-family=%27Impact,sans-serif%27%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pitch:#0F3D2E;--pitch2:#165240;--chalk:#F5F6F1;--ink:#14211B;--muted:#5B6A62;--flare:#FFD23F;--line:#DDE2DA;--card:#fff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:16px/1.6 Barlow,system-ui,sans-serif;background:var(--chalk);color:var(--ink)}
+h1,h2,h3,.logo{font-family:'Barlow Condensed',Impact,sans-serif;line-height:1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flare);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+.bar{background:var(--flare);color:var(--ink);text-align:center;font-size:14px;font-weight:600;padding:8px 16px}
+.stars{color:#E0A800;letter-spacing:2px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.rev p{margin:8px 0 12px}.rev small{color:var(--muted)}
+.empty{border:2px dashed var(--line);border-radius:18px;padding:32px;color:var(--muted);max-width:620px}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:16px;text-decoration:none!important;color:var(--ink)!important}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:99px;z-index:60;transition:transform .25s;font-size:14px}
+.toast.show{transform:translateX(-50%)}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(15,61,46,.94);backdrop-filter:blur(8px);color:#fff}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:30px;font-weight:800;letter-spacing:.04em;text-decoration:none}
+nav ul{display:flex;gap:28px;list-style:none;padding:0}
+nav ul a{text-decoration:none;font-weight:500;opacity:.85}
+nav ul a:hover{opacity:1}
+.cartbtn{background:var(--flare);color:var(--ink);border:0;border-radius:99px;padding:8px 18px;font:600 15px Barlow;cursor:pointer}
+
+/* hero */
+.hero{position:relative;background:var(--pitch);color:#fff;overflow:hidden;padding:96px 0 80px}
+.hero-bg{position:absolute;inset:0;background:url(images/hero.jpg) center/cover;opacity:.35}
+.pitch{position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:760px;max-width:none;opacity:.22}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(64px,11vw,148px);font-weight:800;letter-spacing:-.01em;max-width:9ch}
+.hero p{max-width:46ch;margin:24px 0 32px;font-size:19px;color:#D7E5DD}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:99px;padding:14px 28px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:16px;font-family:Barlow}
+.btn.primary{background:var(--flare);color:var(--ink)}
+.btn.ghost{border-color:rgba(255,255,255,.5);color:#fff}
+.stats{display:flex;gap:48px;margin-top:64px;flex-wrap:wrap}
+.stats b{display:block;font:800 44px 'Barlow Condensed'}
+.stats span{color:#B9CFC4;font-size:14px}
+
+/* shop */
+section{padding:88px 0}
+.head{max-width:620px;margin-bottom:40px}
+h2{font-size:clamp(40px,6vw,64px);font-weight:800}
+.head p{color:var(--muted);margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.shot{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,var(--pitch2),var(--pitch));display:grid;place-items:center;color:rgba(255,255,255,.55);font:600 22px 'Barlow Condensed';text-align:center;padding:16px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;top:12px;left:12px;z-index:1;background:var(--flare);color:var(--ink);border-radius:99px;padding:3px 12px;font-size:13px;font-weight:600}
+.body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:28px;font-weight:600}
+.body p{color:var(--muted);font-size:15px;flex:1}
+.buy{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.price{font:800 26px 'Barlow Condensed'}
+.add{background:var(--pitch);color:#fff;border:0;border-radius:99px;padding:10px 20px;font:600 15px Barlow;cursor:pointer}
+.add:hover{background:var(--pitch2)}
+
+/* benefits */
+.band{background:#fff;border-block:1px solid var(--line)}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px}
+.feat h3{font-size:26px;font-weight:600;margin-bottom:8px}
+.feat p{color:var(--muted)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--pitch);color:#fff;border-radius:18px;padding:28px}
+.steps li::before{content:counter(s);font:800 48px 'Barlow Condensed';color:var(--flare);display:block}
+.steps b{font:600 24px 'Barlow Condensed'}
+.steps p{color:#C6D9CF;margin-top:6px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:720px}
+summary{cursor:pointer;font-weight:600;font-size:18px}
+details p{color:var(--muted);margin-top:8px}
+footer{background:var(--pitch);color:#B9CFC4;padding:40px 0;font-size:14px}
+
+/* cart drawer */
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:#fff;z-index:50;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding:24px;box-shadow:-12px 0 40px rgba(0,0,0,.2)}
+.drawer.open{transform:none}
+.drawer h2{font-size:36px;margin-bottom:16px}
+#items{flex:1;overflow:auto}
+.row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row button{background:none;border:0;color:var(--muted);cursor:pointer;text-decoration:underline;font:inherit;font-size:13px}
+.total{display:flex;justify-content:space-between;font:800 28px 'Barlow Condensed';padding:16px 0 4px}
+.note{font-size:13px;color:var(--muted);margin-bottom:12px}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:40;display:none}
+.scrim.open{display:block}
+@media(max-width:720px){nav ul{display:none}.pitch{width:520px;right:-200px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="bar">Dispatched within 48 hours. Secure checkout with PayPal.</div>
+<header><div class="wrap"><nav>
+  <a class="logo" href="#">FLAIR</a>
+  <ul><li><a href="#shop">Shop</a></li><li><a href="#benefits">Performance</a></li><li><a href="#process">How it works</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li></ul>
+  <button class="cartbtn" id="openCart">Cart (<span id="count">0</span>)</button>
+</nav></div></header>
+
+<main>
+<div class="hero">
+  <div class="hero-bg"></div>
+  <svg class="pitch" viewBox="0 0 400 400" fill="none" stroke="#fff" stroke-width="3" aria-hidden="true"><circle cx="200" cy="200" r="90"/><circle cx="200" cy="200" r="5" fill="#fff"/><path d="M0 200h400M60 0v70h280V0M60 400v-70h280v70M130 0v28h140V0"/></svg>
+  <div class="wrap">
+    <h1>Football performance identity</h1>
+    <p>FLAIR helps players move sharper, feel lighter and train with purpose. From match-day protection to everyday essentials, every product is made for better motion, comfort and confidence on the pitch.</p>
+    <div class="btns"><a class="btn primary" href="#shop">Shop the collection</a><a class="btn ghost" href="#benefits">Why FLAIR</a></div>
+    <div class="stats"><div><b>12k+</b><span>Players equipped</span></div><div><b>4.9/5</b><span>Average rating</span></div><div><b>48h</b><span>Fast dispatch</span></div></div>
+  </div>
+</div>
+
+<section id="shop"><div class="wrap">
+  <div class="head"><h2>Performance essentials</h2><p>Gear that feels as clean and fast as your game.</p></div>
+  <div class="grid" id="products"></div>
+</div></section>
+
+<section id="benefits" class="band"><div class="wrap">
+  <div class="head"><h2>Built for match day</h2></div>
+  <div class="feat">
+    <div><h3>Lighter on your feet</h3><p>Protection built into the fabric, so there is nothing to slip, shift or slow you down.</p></div>
+    <div><h3>Locked in</h3><p>Grip pads keep your foot planted inside your boots through every turn and sprint.</p></div>
+    <div><h3>Recover faster</h3><p>Targeted compression supports your legs after hard sessions so you are ready for the next one.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <div class="head"><h2>How it works</h2></div>
+  <ol class="steps">
+    <li><b>Pick your gear</b><p>Add what you need to your cart.</p></li>
+    <li><b>Pay securely</b><p>Checkout through PayPal. We never store card details.</p></li>
+    <li><b>Get it in 48 hours</b><p>Your order is dispatched fast, ready for the next match.</p></li>
+  </ol>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="head"><h2>Player reviews</h2><p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p></div>
+  <div class="grid" id="revs"></div>
+</div></section>
+
+<section id="faq" class="band"><div class="wrap">
+  <div class="head"><h2>Questions</h2></div>
+  <details><summary>How do I pay?</summary><p>Checkout is handled by PayPal. You will be redirected to complete your payment securely.</p></details>
+  <details><summary>How fast do you dispatch?</summary><p>Orders are dispatched within 48 hours.</p></details>
+  <details><summary>What currency are prices in?</summary><p>All prices are in Australian dollars (AUD).</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 FLAIR. Football performance identity.</div></footer>
+
+<div class="toast" id="toast" role="status"></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <h2>Your cart</h2>
+  <div id="items"></div>
+  <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+  <p class="note">You will be redirected to PayPal to securely complete your payment.</p>
+  <button class="btn primary" id="checkout">Checkout with PayPal</button>
+  <button class="btn" id="closeCart" style="margin-top:8px">Keep shopping</button>
+</aside>
+
+<script>
+// Put each product photo in an /images folder with these file names.
+// If a photo is missing, a green placeholder shows instead.
+const PRODUCTS=[
+ {id:1,name:'Built-In Shin Pads',tag:'Bestseller',price:45,img:'images/shin-pads.jpg',desc:'Elastic sleeves with ultra-light protection built straight into the fabric for match-day support.'},
+ {id:2,name:'Pro Grip Socks',tag:'Performance',price:25,img:'images/grip-socks.jpg',desc:'Non-slip traction pads stop your foot sliding inside your boots and keep you locked in.'},
+ {id:3,name:'Flow State Strips',tag:'New release',price:18,img:'images/nasal-strips.jpg',desc:'Performance nasal strips designed to boost oxygen intake, calm breathing and sustain stamina.'},
+ {id:4,name:'Core Compression Kit',tag:'Recovery',price:68,img:'images/compression-kit.jpg',desc:'Targeted support for lower-body recovery and short-burst acceleration after intense sessions.'}
+];
+// Easiest checkout: put your PayPal.me name here (the part after paypal.me/).
+// The customer is sent to PayPal with their cart total filled in.
+const PAYPAL_ME='';
+// Or paste a full PayPal link here instead (this one wins if filled in).
+const PAYPAL_URL='';
+// Add real customer reviews here, then they appear on the site automatically:
+// {name:'Sam, Melbourne',stars:5,text:'Best grip socks I have worn.'}
+const REVIEWS=[];
+
+let cart=[]; // [{id,qty}]
+try{cart=JSON.parse(localStorage.getItem('flair-cart')||'[]')}catch(e){}
+const $=s=>document.querySelector(s), money=n=>'$'+n.toFixed(2);
+const prod=id=>PRODUCTS.find(p=>p.id==id);
+cart=cart.filter(c=>prod(c.id));
+
+$('#products').innerHTML=PRODUCTS.map(p=>`
+<article class="card">
+  <div class="shot"><span class="tag">${p.tag}</span>${p.name}<img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.remove()"></div>
+  <div class="body"><h3>${p.name}</h3><p>${p.desc}</p>
+  <div class="buy"><span class="price">${money(p.price)} AUD</span><button class="add" data-id="${p.id}">Add to cart</button></div></div>
+</article>`).join('');
+
+$('#revs').innerHTML=REVIEWS.length?REVIEWS.map(r=>`<div class="rev"><span class="stars">${'&#9733;'.repeat(r.stars||5)}</span><p>${r.text}</p><small>${r.name}</small></div>`).join(''):'<div class="empty">Reviews from FLAIR players will appear here. Bought something? Tell us how it went.</div>';
+
+function render(){
+  const n=cart.reduce((a,c)=>a+c.qty,0), t=cart.reduce((a,c)=>a+c.qty*prod(c.id).price,0);
+  $('#count').textContent=n;
+  $('#items').innerHTML=cart.length?cart.map(c=>{const p=prod(c.id);return `<div class="row"><div>${p.name}<br><small>${money(p.price)} each</small><div class="qty"><button data-dec="${p.id}" aria-label="Less">&minus;</button>${c.qty}<button data-inc="${p.id}" aria-label="More">+</button></div></div><button data-rm="${p.id}">Remove</button></div>`}).join(''):'<p class="note">Your cart is empty. Add something from the collection.</p>';
+  $('#total').textContent=money(t);
+  try{localStorage.setItem('flair-cart',JSON.stringify(cart))}catch(e){}
+}
+function change(id,d){const c=cart.find(x=>x.id==id);if(!c){if(d>0)cart.push({id:+id,qty:1})}else{c.qty+=d;if(c.qty<1)cart=cart.filter(x=>x!==c)}render()}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+const toggle=o=>{$('#drawer').classList.toggle('open',o);$('#scrim').classList.toggle('open',o)};
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-id]'); if(a){change(a.dataset.id,1);toast(prod(a.dataset.id).name+' added')}
+  const i=e.target.closest('[data-inc]'); if(i)change(i.dataset.inc,1);
+  const d=e.target.closest('[data-dec]'); if(d)change(d.dataset.dec,-1);
+  const r=e.target.closest('[data-rm]'); if(r){cart=cart.filter(x=>x.id!=r.dataset.rm);render()}
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+$('#openCart').onclick=()=>toggle(true);
+$('#closeCart').onclick=$('#scrim').onclick=()=>toggle(false);
+$('#checkout').onclick=()=>{
+  if(!cart.length){toast('Your cart is empty');return}
+  const t=cart.reduce((a,c)=>a+c.qty*prod(c.id).price,0).toFixed(2);
+  if(PAYPAL_URL)location.href=PAYPAL_URL;
+  else if(PAYPAL_ME)location.href='https://www.paypal.com/paypalme/'+encodeURIComponent(PAYPAL_ME)+'/'+t+'AUD';
+  else alert('Add your PayPal.me name to PAYPAL_ME in index.html to turn on checkout.');
+};
+render();
+</script>
+</body>
+</html>
